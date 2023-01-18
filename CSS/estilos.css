@@ -1,0 +1,802 @@
+/* Estilos Generales */
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor de barra de navegacion y main*/
+
+.Contenedor{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+}
+
+main{
+    display: flex;
+    margin: 0;
+    width: 90%;
+}
+
+/* Barra de navegacion */
+header{
+    width: 5%;
+    background-color: white;
+    border-radius: 10px;
+    left: 10px;
+    margin-right: 0.4%;
+}
+
+.barra-navegacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 101%;
+    margin-left: 0;
+    padding-right: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: #171717;
+}
+.material-icons{
+    font-size: 28px;
+}
+
+#send{
+    rotate: -45deg;
+
+}
+.fa-brain{
+    font-size: 24px;
+}
+
+.barra-navegacion a:hover{
+    color:  #16d9e3 ;    
+}
+
+/* icono barra navegacion seleccionado */
+
+.elegido{   
+    color:  #16d9e3;
+}
+
+/* Texto barra navegacion oculto*/
+.texto{
+    position: relative;
+    right: 144%;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    text-transform: uppercase;
+    padding: 10px 0 10px 0;
+    margin-top: -33px;
+    opacity: 0;
+    border-radius: 4px;
+    width: 90px;
+}
+
+.barra-navegacion a span:hover ~ .texto{
+    opacity: 1;
+}
+
+.barra-navegacion a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 72px;
+    text-align: center;   
+    justify-content: center;
+    transition: color 0.3s ease 0s;
+}
+
+.barra-navegacion a:nth-child(-n+4)::after {
+    content: '';
+    position: relative;
+    left: 10%;
+    top: 33%;
+    width: 80%;
+    height: 1px;
+    background:  #16d9e3;
+}
+
+/* Pagina de presentacion */
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 600px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    margin-right: 0.2%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.nombre-perfil{
+    font-size: 32px;
+    color: #3584A7;
+    line-height: 36px;
+    margin: 8px;    
+}
+
+.profesion{
+    font-size: 24px;
+    color: #16d9e3;
+    line-height: 14px;
+    margin: 10px;
+}
+
+.foto-perfil{
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+}
+
+            /* color decoracion debajo de la foto perfil */
+.fondo{
+    position: absolute;
+    margin-left: 13px;
+    margin-top: -185px;
+    width: 250px;
+    height: 250px;
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    border-radius: 100%;
+}
+
+.linea{
+    position: relative;  
+    width: 90%;
+    height: 3px;
+    margin: 3%;
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+}
+/* Redes sociales */
+
+.Redes-Sociales{
+    margin: 20px;
+}
+.Redes-Sociales a{
+    transition: color 0.3s ease 0s;
+    margin: 0 15px;
+    font-size: 32px;
+}
+.fa-twitter:hover{
+    color: #55acee;
+    transform: translateY(-3px) scale(1.5);
+}
+.fa-github:hover{
+    color: orange;
+    transform: translateY(-3px) scale(1.5);
+}
+.fa-linkedin:hover{
+    color:  #0077b5;
+    transform: translateY(-3px) scale(1.5);
+}
+
+/* Estilo de paginas seleccionadas */
+.paginas{
+    width:60%;
+    background-color: white;
+    border-radius: 10px;
+    height: 570px;
+    min-width: 425px;
+    overflow: hidden;
+    margin-left: 0.2%;
+    margin-top: 15px;
+
+}
+/* estilos general para paginas seleccionadas */
+
+.vista{
+    height: 560px;
+    width: 100%;
+    /* background-color: white; */
+    padding: 10px 5px 0px 3px;
+    overflow: auto;
+    opacity: 1;
+    transition: opacity 1s ease, transform 1s ease;
+    transform: translateX(-8px);
+}
+/* .vista{
+    overflow: auto;
+    opacity: 1;
+    transition: opacity 1s ease, transform 1s ease;
+    transform: translateX(-8px); 
+} */
+/* estilos paginas acerca de mi */
+
+.Titulo{
+    position: relative;
+    text-align: left;
+    margin: 0 0 15px 20px;
+    padding: 0 0 5px 0;
+    position: relative;
+    font-size: 19px;
+    color: #3584A7;
+    line-height: 21px;
+}
+
+.Acerca-de-Mi p{
+    text-align: justify;
+}
+
+.Acerca-de-Mi > div{
+    padding: 5px 17px;
+    position: relative;
+
+}
+
+.Acerca-de-Mi> div > div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Acerca-de-Mi > div > div > div{
+    width: 50%;
+    text-align: left;
+}
+
+.Acerca-de-Mi > div > div > div span{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.Servicios{
+    margin-top: 50px;
+}
+
+.Servicios >div{
+   display: flex;
+   flex-wrap: wrap;
+   position: relative;
+}
+
+.Servicios article{
+    position: relative;
+    width: 50%;
+    text-align: left;
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
+.Servicios article .material-icons{
+    margin: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: whitesmoke;
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Servicios article h4{
+    font-size: 16px;
+    color: #0077b5;
+    text-transform: uppercase;
+}
+
+.Servicios article p{
+    line-height: 1.6;
+    padding: 0;
+    text-align: justify;
+}
+
+/* Lineas decorativas */
+
+.Titulo::after{
+    content: '';
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+    width:100%;
+    height: 1px;
+    background:  #16d9e3;
+}
+
+.Linea-Iz{
+    position: relative;
+}
+
+.Linea-Iz::before{
+    content: '';
+    position: absolute;
+    left: 13px;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background:#16d9e3;
+}
+
+.Linea-Abajo{
+    position: relative;
+}
+
+.Linea-Abajo::after{
+    content: '';
+    position: absolute;
+    left: 13px;
+    bottom: 0;
+    width: 90%;
+    height: 1px;
+    background: #16d9e3;
+}
+
+.Servicios >div:after {
+    content: '';
+    position: absolute;
+    left: 52%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #16d9e3;
+}
+
+/* Pagina resumen cv */
+
+.resumen-lineas{
+    display: flex;
+}
+
+.resumen-linea h4{
+    margin: 0;
+    text-align: left;
+    padding: 20px 18px;
+    font-size: 13px;
+    color: #0077b5;
+    text-transform: uppercase;
+}
+
+.resumen-linea .fecha::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 4px;
+    width: 9px;
+    height: 9px;
+    background: #16d9e3;
+    border-radius: 9px; 
+}
+
+.Resumen-habil{
+    margin-top: 10px;
+}
+.Resumen-habil > div{
+    display: flex;
+}
+.Resumen-habil > div section{
+    flex: 1;
+    text-align: left;
+}
+
+.Resumen-habil > div section > div{
+    padding: 18px 20px;
+}
+
+.Resumen-habil h4{
+    margin: 0;
+    text-align: left;
+    padding: 20px 18px;
+    font-size: 13px;
+    line-height: 13px;
+    color: #0077b5;
+    font-weight: 600;
+}
+
+.Resumen-habil > div section > div > div:last-child{
+    width: 100%;
+    background: #c2e9fb;
+    height: 4px;
+}
+
+.Resumen-habil > div section > div > div > div{
+    background: #46aef7;
+    height: 4px;
+}
+/* lineas decorativas */
+
+.resumen-linea .fecha .Activo::before {
+    background: #34c150;
+}
+
+.Linea-Iz h4 .material-icons{
+    position: relative;
+    float: left;
+    top:-7px;
+    width: 40px;
+    height: 40px;
+    font-size: 26px;
+    color: #16d9e3;
+}
+
+.resumen-linea article{
+    padding: 15px 20px;
+}
+
+.resumen-linea .fecha{
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+.resumen-linea .nombre{
+    margin: 0;
+    font-size: 13px;
+}
+
+.resumen-linea .empresa{
+    margin: 0 0 10px 0;
+    color: #0077b5;
+    font-weight: 300;
+}
+
+.Linea-Abajo > div > div{
+    font-weight: 600;
+}
+
+/* PAGINA DE PARA CONTACTAR */
+
+main .Contacto{
+    margin-bottom: 50px;
+}
+
+.info-contacto{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 18px;
+}
+
+.info-contacto > div{
+    width: 50%;
+    text-align: left;
+}
+
+.info-contacto > div span{
+    font-weight: 600;
+    font-size: 16px;
+    color: #0077b5;
+}
+
+.mapa{
+    display: flex;
+    justify-content: center;
+}
+.info-contacto + .Titulo{
+    margin-top: 20px;;
+}
+
+iframe{
+    width: 550px;
+    height: 250px;
+    margin-top: 15px;
+    border: 0;
+    border-radius: 12px;   
+}
+/* Pagina trabajos */
+
+.Trabajos>div{
+    width: 46%;   
+}
+
+.Trabajos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.Linea-A{
+    position: relative;
+}
+
+.Linea-A::after{
+    content: '';
+    position: absolute;
+    left: -1.5%;
+    bottom: 0;
+    width:100%;
+    height: 1px;
+    background: #16d9e3;
+}
+
+.Linea-I{
+    position: relative;
+}
+
+.Linea-I::before{
+    content: '';
+    position: absolute;
+    left: 98%;
+    top: -8.2%;
+    width: 1px;
+    height: 219%;
+    background:#16d9e3;
+}
+
+.Trabajos > div > h4{
+    text-transform: uppercase;
+    padding: 10px 0 0 10px;
+    margin: 0;
+    font-size: 14px;
+    color: black;
+}
+
+figure{
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    margin: 0;
+    padding: 10px;
+}
+
+figure img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* imagen modal */
+#zoom{
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    color: white;
+    font-size: 30px;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+#zoom:hover{
+    opacity: 1;
+    color: #55acee;
+    transform: translateY(-3px) scale(1.5);
+}
+
+.capa{
+    position: absolute;
+    top:3.2%;
+    width: 94%;
+    height: 92.5%;
+    border-radius:10px ;
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    opacity: 0; 
+    visibility: hidden;
+    transition: 0.9s;
+}
+
+figure:hover > .capa{
+    opacity: 0.4;
+    visibility: visible;
+    cursor: pointer;
+}
+
+figure:hover >a > #zoom{
+    opacity: 1;
+    color: white;
+    transform: translateY(-3px) scale(1.5);
+}
+
+/* Ventana Light modal */
+
+.Ventana{
+    display: none;
+}
+
+.Ventana:target{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:absolute;
+    left:-6%;
+    background-color:rgba(53,132,167,0.56);
+    width: 111.5%;
+    height: 100%;
+    z-index: 1;
+}
+
+.contenido{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;  
+}
+
+.cerrarLB{
+    align-self:flex-end;
+    margin: 15px;
+    color:white;
+    text-decoration:none;
+}
+
+.cerrarLB > .material-icons{
+    font-size: 30px;
+}
+
+.cerrarLB > .material-icons:hover{
+    color:white;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* barra de scroll */
+
+main .vista::-webkit-scrollbar {
+    width: 5px;
+    height: 9px;
+}
+   
+main .vista::-webkit-scrollbar-track {
+    background: #ddd;
+}
+   
+main .vista::-webkit-scrollbar-thumb {
+    background: #0077b5; 
+}
+
+.resumen-linea .fecha .Activo{
+    color: #1bb96c;
+}
+
+/* Media querie para diseños responsivo */
+
+
+@media only screen and (max-width: 880px) {
+
+    .Contenedor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+    }
+    header{        
+        min-width: 540px;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+        position: fixed;
+        margin-right: 0;
+        border-radius: 5px;
+        top: 0;
+        left: calc(50% - 250px);
+        z-index: 100;
+    }
+    /* responsive */
+    header .barra-navegacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    main{
+        display: block;
+        margin-top: 90px;
+        width: 100%;
+        height: 80%;
+        /* flex-direction: column; */
+    }
+
+    main .perfil{
+        position: relative;
+    }
+
+    .perfil{
+        left:calc(50% - 250px);
+        min-width: 540px;
+        border-radius: 5px;
+    }
+
+    .paginas{
+        box-sizing: border-box;
+        height: 842px;
+        position: relative;
+        overflow: visible;
+        border-radius: 4px;
+        min-width: 540px;
+        margin-left: 0;
+        left: calc(50% - 250px);    
+    }
+    .Acerca, .Resumen, .Aptitud, .Contacto, #Trabajos {
+        background: white;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 10px 0 10px 0;
+
+    }
+    .vista{
+        height: 100%;
+        width: 540px;
+        padding: 10px 0 10px 0;
+        overflow: auto;
+        opacity: 1;
+        transition: none;
+        transform: none;
+    }
+        
+    .barra-navegacion a:nth-child(-n+4)::after {
+        content: '';
+        position: relative;
+        left: 10%;
+        top: 33%;
+        width: 80%;
+        height: 0px;
+        background:  #16d9e3;
+    }
+
+    .barra-navegacion a:nth-child(-n+5)::before {
+        content: '';
+        position: absolute;       
+        width: 1px;
+        height: 93%;
+        background: #16d9e3;
+    }
+
+    .texto{
+        right: -10%;
+        top:82%;
+        border-radius: 5px;
+    }
+
+    .img-ventana{
+        width:  80%;
+    }
+
+    .img-ventana-t3{
+        width: 80%;
+    }
+    .cerrarLB{
+        left: -88%;
+        position: relative;
+        align-items: flex-start;
+    }
+
+
+    body::-webkit-scrollbar {
+        width: 5px;
+    }
+    body::-webkit-scrollbar:horizontal{
+        width: 5px;
+        height: 10px;
+    }
+       
+    body::-webkit-scrollbar-track {
+        background: #ddd;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: #0077b5;
+        border-radius: 10px;
+    }
+}
